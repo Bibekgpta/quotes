@@ -15,7 +15,7 @@
 - yarn install
 - yarn start client
 - yarn start server
-- [open to populate data](http://localhost:3333/api/quotes/populate
+- [open to populate data](http://localhost:3333/api/quotes/populate)
 
 
 ## Framework/library/tools/database used
