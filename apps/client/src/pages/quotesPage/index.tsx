@@ -48,6 +48,7 @@ export function Quotes() {
       <FilterBar
         start={state.start}
         end={state.end}
+        disabled={!state.key}
         onChange={filterChangeHandler}
       />
 

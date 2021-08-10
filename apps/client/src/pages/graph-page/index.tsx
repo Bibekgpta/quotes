@@ -24,6 +24,7 @@ export const GraphPage = memo(({ secret }: GrapePageProps) => {
         start={state.start}
         end={state.end}
         symbol={state.symbol}
+        disabled={!state.key}
         onChange={(filter) => {
           dispatch(actions.setFilter(filter));
           dispatch(actions.loadData());

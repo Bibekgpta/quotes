@@ -33,6 +33,7 @@ export interface IFilter {
   start: Date;
   end: Date;
   symbol?: string;
+  disabled?:boolean;
 }
 
 interface ISFilterBarProps extends IFilter {
@@ -41,7 +42,7 @@ interface ISFilterBarProps extends IFilter {
 }
 
 export const FilterBar = memo(
-  ({ onChange, start, end, symbol, showSymbol = false }: ISFilterBarProps) => {
+  ({ onChange, start, end, symbol, showSymbol = false, disabled=false }: ISFilterBarProps) => {
     const classes = useStyles();
     const [state, setState] = useState<IFilter>({ start, end, symbol });
     const [open, setOpen] = useState(false);
@@ -59,7 +60,7 @@ export const FilterBar = memo(
         </div>
         {/* <ClickAwayListener onClickAway={handleTooltipClose}> */}
         <Tooltip
-          open={open}
+          open={!disabled && open}
           disableFocusListener
           disableHoverListener
           interactive
@@ -85,6 +86,7 @@ export const FilterBar = memo(
               value={state.symbol}
               margin="dense"
               variant="outlined"
+              disabled={disabled}
               onChange={(event) =>
                 setState({ ...state, symbol: event.target.value as string })
               }
@@ -101,6 +103,7 @@ export const FilterBar = memo(
         <Button
           variant="contained"
           color="primary"
+          disabled={disabled}
           onClick={() => onChange(state)}
         >
           Apply
