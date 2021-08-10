@@ -16,3 +16,19 @@
 - yarn start client
 - yarn start server
 - [open to populate data](http://localhost:3333/api/quotes/populate
+
+
+## Framework/library/tools/database used
+- [nodejs](https://nodejs.org/en/)
+- [Nestjs](https://nestjs.com/)
+- [Reactjs](https://reactjs.org/)
+- [MATERIAL-UI](https://material-ui.com/)
+- [Mongodb](https://www.mongodb.com/) 
+- [react-virtualized](https://github.com/bvaughn/react-virtualized/) 
+- [ApexCharts](https://apexcharts.com/) 
+- [Nx](https://nx.dev/) 
+
+
+## To Do
+- Performance optimization
+- Unit test cases
