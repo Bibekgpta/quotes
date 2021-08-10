@@ -2,7 +2,7 @@
 
 # Quotes
 
-## Dependecies
+## Dependencies
 - [Nodejs and yarn](https://nodejs.org/en/)
 - [Mongodb](https://www.mongodb.com/) or (use monog-docker to install)
  - `docker network create -d bridge tis`
